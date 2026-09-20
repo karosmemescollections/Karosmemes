@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#5C1A2E">
+<title>Karo's Memes — We can put a smile on your face</title>
+<meta name="description" content="A collection of exclusive rib cracking memes for your viewing pleasure. Why worry when you can laugh.">
+
+<meta property="og:title" content="Karo's Memes — We can put a smile on your face">
+<meta property="og:description" content="A collection of exclusive rib cracking memes for your viewing pleasure. Why worry when you can laugh.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="PASTE_YOUR_SITE_URL_HERE">
+<meta property="og:image" content="https://lh3.googleusercontent.com/d/1XCxx-yp0-oHy8YQ4N2i1PYRwIj4b8D11=w600">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#ff3b47; --yellow:#ffcc2f; --blue:#2b6bff; --wa:#25D366;
+  --wine:#5C1A2E; --wine-2:#7A2440;
+  --wine-text:#FFF4EE; --wine-dim:rgba(255,244,238,.66);
+  --wine-line:rgba(255,255,255,.14); --wine-soft:rgba(255,255,255,.10);
+  --bg:#ffffff; --bg2:#f6f7fb; --card:#ffffff; --card2:#f2f4f9;
+  --text:#0d1220; --dim:#6b7280; --border:rgba(13,18,32,.10);
+  --shadow:0 10px 34px rgba(13,18,32,.10);
+  --radius:20px; --nav-h:64px;
+}
+[data-theme="dark"]{
+  --bg:#0b1020; --bg2:#0f1630; --card:#151d38; --card2:#1c2547;
+  --text:#f2f5ff; --dim:#93a0c0; --border:rgba(255,255,255,.10);
+  --shadow:0 10px 34px rgba(0,0,0,.45);
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:'Outfit',system-ui,-apple-system,sans-serif;
+  background:var(--bg);color:var(--text);min-height:100dvh;
+  overflow-x:hidden;transition:background .3s,color .3s;
+  padding-bottom:calc(var(--nav-h) + env(safe-area-inset-bottom) + 12px);
+}
+img{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;user-select:none}
+a{text-decoration:none;color:inherit}
+
+header{
+  position:sticky;top:0;z-index:90;
+  display:flex;align-items:center;gap:10px;
+  padding:10px 14px;padding-top:calc(10px + env(safe-area-inset-top));
+  background:var(--wine);
+  border-bottom:1px solid var(--wine-line);
+  box-shadow:0 4px 22px rgba(92,26,46,.28);
+}
+.brand{display:flex;align-items:center;gap:9px;min-width:0}
+.logo-box{
+  width:38px;height:38px;border-radius:12px;flex-shrink:0;
+  background:linear-gradient(135deg,var(--red),var(--yellow));
+  display:grid;place-items:center;font-size:19px;overflow:hidden;
+  box-shadow:0 4px 14px rgba(0,0,0,.35), inset 0 0 0 1.5px rgba(255,255,255,.2);
+  transition:transform .25s;
+}
+.logo-box img{width:100%;height:100%;object-fit:cover}
+.brand:active .logo-box{transform:scale(.92)}
+.brand-text{min-width:0}
+.brand-text h1{font-size:16px;font-weight:900;letter-spacing:-.4px;white-space:nowrap;color:var(--wine-text)}
+.brand-text small{
+  display:block;font-size:10px;font-weight:600;color:var(--wine-dim);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:140px;letter-spacing:.2px;
+}
+.head-right{margin-left:auto;display:flex;gap:8px;align-items:center}
+.live-pill{
+  display:flex;align-items:center;gap:6px;
+  padding:7px 11px;border-radius:12px;
+  background:var(--wine-soft);border:1px solid var(--wine-line);
+  color:var(--wine-text);font-size:11.5px;font-weight:800;
+  white-space:nowrap;
+}
+.live-dot{
+  width:7px;height:7px;border-radius:50%;background:#4ade80;
+  box-shadow:0 0 8px rgba(74,222,128,.9);
+  animation:pulse-dot 1.6s ease-in-out infinite;
+  flex-shrink:0;
+}
+@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.85)}}
+.icon-btn{
+  width:42px;height:42px;border-radius:13px;
+  background:var(--wine-soft);
+  border:1px solid var(--wine-line);
+  color:var(--wine-text);
+  display:grid;place-items:center;font-size:17px;
+  transition:transform .15s,background .2s;
+}
+.icon-btn:hover{background:rgba(255,255,255,.18)}
+.icon-btn:active{transform:scale(.9)}
+.icon-btn.spinning{animation:sp .8s linear}
+@keyframes sp{to{transform:rotate(360deg)}}
+
+.top-nav{display:none}
+
+main{max-width:1200px;margin:0 auto;padding:0 14px}
+.page{display:none}
+.page.active{display:block;animation:fade .3s ease}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+.hero{padding:26px 0 30px}
+.greet{font-size:13px;font-weight:700;color:var(--dim);margin-bottom:8px;letter-spacing:.2px}
+.hero h2{
+  font-size:clamp(30px,9vw,58px);font-weight:900;letter-spacing:-1.5px;
+  line-height:1.06;margin-bottom:12px;
+}
+.hero h2 .grad{
+  background:linear-gradient(100deg,var(--wine),var(--red) 45%,var(--yellow));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.hero p.sub{font-size:16px;color:var(--dim);font-weight:600;line-height:1.6;margin-bottom:22px}
+.hero-actions{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
+.btn{
+  font-weight:800;font-size:15.5px;border-radius:16px;padding:16px 22px;
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  transition:transform .15s,box-shadow .2s;width:100%;text-align:center;
+}
+.btn:active{transform:scale(.97)}
+.btn-red{background:var(--wine);color:#fff;box-shadow:0 8px 24px rgba(92,26,46,.4)}
+.btn-yellow{background:var(--yellow);color:#0d1220;box-shadow:0 8px 24px rgba(255,204,47,.34)}
+.btn-blue{background:var(--blue);color:#fff;box-shadow:0 8px 24px rgba(43,107,255,.3)}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 8px 24px rgba(37,211,102,.35)}
+.btn-ghost{background:var(--card2);color:var(--text);border:1px solid var(--border)}
+.trust{
+  font-size:13.5px;color:var(--dim);font-weight:700;line-height:1.5;
+  display:flex;gap:9px;align-items:flex-start;
+}
+.trust::before{content:'🎲';font-size:18px;line-height:1.2;flex-shrink:0}
+.trust b{color:var(--text)}
+
+.hero-visual{position:relative;margin-top:8px}
+.float-card{
+  position:relative;border-radius:24px;overflow:hidden;
+  background:var(--card);border:1px solid var(--border);box-shadow:var(--shadow);
+  aspect-ratio:4/5;transform:rotate(-2deg);
+}
+.float-card img{width:100%;height:100%;object-fit:cover}
+.float-card .badge{
+  position:absolute;top:12px;right:12px;width:46px;height:46px;border-radius:14px;
+  overflow:hidden;background:#fff;display:grid;place-items:center;font-size:22px;
+  box-shadow:0 6px 20px rgba(0,0,0,.25);border:2px solid #fff;
+}
+.float-card .badge img{width:100%;height:100%;object-fit:cover}
+.float-card .tag{
+  position:absolute;bottom:12px;left:12px;padding:8px 14px;border-radius:12px;
+  background:rgba(0,0,0,.62);backdrop-filter:blur(8px);color:#fff;
+  font-size:11.5px;font-weight:700;max-width:calc(100% - 24px);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.glow{position:absolute;inset:-30px;border-radius:50%;z-index:-1;
+  background:radial-gradient(circle,rgba(122,36,64,.35),transparent 65%);filter:blur(24px)}
+
+.sec-title{
+  font-size:20px;font-weight:900;letter-spacing:-.5px;margin:30px 0 14px;
+  display:flex;align-items:center;gap:10px;
+}
+.sec-title::after{content:'';flex:1;height:1px;background:var(--border)}
+
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:24px;max-width:400px}
+.stat{background:var(--card2);border:1px solid var(--border);border-radius:16px;
+  padding:14px 8px;text-align:center}
+.stat b{display:block;font-size:21px;font-weight:900;letter-spacing:-.8px}
+.stat span{font-size:9.5px;color:var(--dim);font-weight:800;letter-spacing:.7px;text-transform:uppercase}
+
+.visitors{
+  display:grid;grid-template-columns:1fr 1fr;gap:9px;
+  background:linear-gradient(135deg,rgba(92,26,46,.06),rgba(255,204,47,.06));
+  border:1px solid var(--border);border-radius:16px;padding:14px;margin-top:22px;
+}
+.vis-item{text-align:center}
+.vis-item b{display:flex;align-items:center;justify-content:center;gap:7px;
+  font-size:22px;font-weight:900;letter-spacing:-.8px}
+.vis-item span{font-size:9.5px;color:var(--dim);font-weight:800;
+  letter-spacing:.7px;text-transform:uppercase}
+.vis-item.live b{color:#16a34a}
+[data-theme="dark"] .vis-item.live b{color:#4ade80}
+
+.talk{
+  margin-top:24px;padding:20px;border-radius:20px;
+  background:linear-gradient(135deg,rgba(37,211,102,.10),rgba(37,211,102,.03));
+  border:1px solid rgba(37,211,102,.3);
+  display:flex;flex-direction:column;gap:14px;
+}
+.talk h4{font-size:18px;font-weight:900;letter-spacing:-.4px;
+  display:flex;align-items:center;gap:9px}
+.talk p{font-size:13.5px;color:var(--dim);line-height:1.6;font-weight:600}
+.talk .btn{box-shadow:0 8px 24px rgba(37,211,102,.35)}
+
+.pool-switch{
+  display:flex;gap:6px;background:var(--card2);border:1px solid var(--border);
+  border-radius:16px;padding:5px;margin-bottom:16px;
+}
+.pool-btn{
+  flex:1;padding:12px 6px;border-radius:12px;font-weight:800;font-size:12px;
+  color:var(--dim);transition:all .2s;display:flex;align-items:center;
+  justify-content:center;gap:5px;white-space:nowrap;
+}
+.pool-btn:active{transform:scale(.97)}
+.pool-btn.on{
+  background:var(--wine);color:var(--wine-text);
+  box-shadow:0 4px 14px rgba(92,26,46,.4);
+}
+.pool-btn:disabled{opacity:.35;cursor:not-allowed}
+
+.stage{
+  position:relative;border-radius:var(--radius);overflow:hidden;
+  background:var(--card);border:1px solid var(--border);
+  min-height:240px;display:grid;place-items:center;box-shadow:var(--shadow);
+  touch-action:pan-y;
+}
+.stage img{width:100%;height:auto;max-height:62dvh;object-fit:contain;
+  animation:pop .35s cubic-bezier(.2,.9,.3,1)}
+@keyframes pop{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
+.stage img.out{animation:out .22s ease forwards}
+@keyframes out{to{opacity:0;transform:scale(1.03)}}
+.logo-flag{position:absolute;top:10px;left:10px;font-size:17px;
+  filter:drop-shadow(0 2px 6px rgba(0,0,0,.6));animation:twinkle 2s ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(1.2)}}
+
+.swipe-hint{text-align:center;font-size:11.5px;color:var(--dim);
+  font-weight:700;margin-top:10px;letter-spacing:.3px}
+
+.ctrl{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px}
+.ctrl .full{grid-column:1/-1}
+.meta{font-size:11.5px;color:var(--dim);font-weight:600;text-align:center;
+  margin-top:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+.like-btn{background:var(--card2);border:1px solid var(--border);border-radius:16px;
+  padding:16px;font-weight:800;font-size:15.5px;display:flex;align-items:center;
+  justify-content:center;gap:8px;transition:transform .15s,background .25s}
+.like-btn:active{transform:scale(.96)}
+.like-btn.liked{background:var(--wine);color:#fff;border-color:transparent;
+  box-shadow:0 8px 24px rgba(92,26,46,.4)}
+.like-btn.liked .h{animation:bump .4s cubic-bezier(.3,1.7,.5,1)}
+@keyframes bump{0%{transform:scale(1)}45%{transform:scale(1.65)}100%{transform:scale(1)}}
+
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+.tile{position:relative;aspect-ratio:1;border-radius:15px;overflow:hidden;
+  background:var(--card2);border:1px solid var(--border);
+  transition:transform .2s;cursor:pointer}
+.tile:active{transform:scale(.96)}
+.tile img{width:100%;height:100%;object-fit:cover}
+.tile .dot{position:absolute;top:7px;right:7px;font-size:13px;
+  filter:drop-shadow(0 2px 5px rgba(0,0,0,.7))}
+
+.center{text-align:center;padding:56px 16px;color:var(--dim)}
+.center .big{font-size:46px;display:block;margin-bottom:12px}
+.center h3{color:var(--text);font-size:18px;font-weight:900;margin-bottom:7px}
+.center p{font-size:14px;line-height:1.6;max-width:400px;margin:0 auto 18px}
+.spin{width:36px;height:36px;border:3px solid var(--border);border-top-color:var(--wine);
+  border-radius:50%;animation:sp2 .7s linear infinite;margin:0 auto 16px}
+@keyframes sp2{to{transform:rotate(360deg)}}
+.err{background:rgba(92,26,46,.08);border:1px solid rgba(92,26,46,.3);
+  border-radius:16px;padding:18px;text-align:left;font-size:13.5px;line-height:1.7}
+.err ul{margin:8px 0 0 18px}
+
+.lb{position:fixed;inset:0;z-index:200;background:rgba(20,5,12,.96);
+  display:none;place-items:center;padding:16px;backdrop-filter:blur(8px)}
+.lb.open{display:grid}
+.lb img{max-width:100%;max-height:74dvh;border-radius:14px;object-fit:contain}
+.lb-x{position:absolute;top:calc(14px + env(safe-area-inset-top));right:14px;
+  width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.15);
+  color:#fff;font-size:21px;display:grid;place-items:center}
+.lb-bar{display:flex;gap:9px;margin-top:16px;justify-content:center;flex-wrap:wrap}
+.lb-bar button{padding:13px 20px;border-radius:14px;font-weight:800;font-size:14px;
+  background:rgba(255,255,255,.14);color:#fff;display:inline-flex;
+  align-items:center;gap:7px}
+.lb-bar button.wa{background:var(--wa)}
+
+.ad-slot{max-width:1200px;margin:34px auto 0;padding:0 14px}
+.ad-inner{
+  border:2px dashed var(--border);border-radius:18px;
+  padding:20px 16px;text-align:center;background:var(--bg2);
+}
+.ad-label{font-size:9.5px;font-weight:900;letter-spacing:1.6px;
+  text-transform:uppercase;color:var(--dim);margin-bottom:8px}
+.ad-inner p{font-size:13px;color:var(--dim);font-weight:600}
+
+.tabbar{
+  position:fixed;bottom:0;left:0;right:0;z-index:95;
+  display:flex;background:var(--wine);
+  border-top:1px solid var(--wine-line);
+  box-shadow:0 -4px 22px rgba(92,26,46,.28);
+  padding-bottom:env(safe-area-inset-bottom);
+}
+.tab{
+  flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:3px;padding:9px 2px;font-size:9.5px;font-weight:800;color:var(--wine-dim);
+  letter-spacing:.2px;transition:color .2s;position:relative;height:var(--nav-h);
+}
+.tab .ic{font-size:20px;line-height:1;transition:transform .2s}
+.tab.on{color:var(--wine-text)}
+.tab.on .ic{transform:translateY(-2px) scale(1.12)}
+.tab.on::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:30px;height:3px;border-radius:0 0 4px 4px;
+  background:var(--yellow);box-shadow:0 0 12px rgba(255,204,47,.7)}
+
+.wa-fab{
+  position:fixed;right:16px;
+  bottom:calc(var(--nav-h) + env(safe-area-inset-bottom) + 16px);
+  width:58px;height:58px;border-radius:50%;
+  background:var(--wa);color:#fff;
+  display:grid;place-items:center;font-size:26px;
+  box-shadow:0 8px 28px rgba(37,211,102,.5);
+  z-index:80;transition:transform .2s,box-shadow .2s;
+  border:none;
+}
+.wa-fab:active{transform:scale(.9)}
+.wa-fab::after{
+  content:'';position:absolute;inset:-6px;border-radius:50%;
+  border:2px solid var(--wa);opacity:0;animation:ripple 2.6s ease-out infinite;
+  pointer-events:none;
+}
+@keyframes ripple{
+  0%{transform:scale(.85);opacity:.7}
+  100%{transform:scale(1.4);opacity:0}
+}
+
+#toasts{position:fixed;bottom:calc(var(--nav-h) + env(safe-area-inset-bottom) + 16px);
+  left:50%;transform:translateX(-50%);z-index:300;display:flex;flex-direction:column;
+  gap:7px;align-items:center;pointer-events:none;
+  width:calc(100% - 100px);max-width:420px}
+.toast{background:var(--wine);color:var(--wine-text);padding:11px 20px;border-radius:14px;
+  font-weight:800;font-size:13.5px;box-shadow:0 10px 30px rgba(92,26,46,.5);
+  animation:tin .3s cubic-bezier(.2,1.4,.4,1);max-width:100%;text-align:center;
+  border:1px solid var(--wine-line)}
+@keyframes tin{from{opacity:0;transform:translateY(14px) scale(.92)}to{opacity:1;transform:none}}
+
+.particle{position:fixed;pointer-events:none;font-size:20px;z-index:250;
+  animation:fu 1s ease-out forwards}
+@keyframes fu{to{transform:translate(var(--dx),-140px) scale(.4);opacity:0}}
+
+.confetti{
+  position:fixed;width:9px;height:14px;pointer-events:none;z-index:400;
+  animation:conf 2.4s cubic-bezier(.2,.7,.3,1) forwards;
+}
+@keyframes conf{
+  0%{transform:translate(0,0) rotate(0);opacity:1}
+  100%{transform:translate(var(--cx),var(--cy)) rotate(720deg);opacity:0}
+}
+
+.install-modal{
+  position:fixed;inset:0;z-index:500;background:rgba(20,5,12,.9);
+  display:flex;align-items:center;justify-content:center;padding:20px;
+  backdrop-filter:blur(8px);animation:fade .25s;
+}
+.install-card{
+  background:var(--card);border-radius:22px;padding:28px;max-width:400px;width:100%;
+  box-shadow:0 20px 60px rgba(0,0,0,.5);text-align:center;
+}
+.install-card .em{font-size:52px;margin-bottom:12px;line-height:1}
+.install-card h3{font-size:19px;font-weight:900;margin-bottom:14px;color:var(--text);letter-spacing:-.3px}
+.install-card ol{text-align:left;color:var(--dim);font-size:14px;line-height:1.9;
+  margin:0 0 20px 18px;font-weight:600}
+.install-card ol li b{color:var(--text)}
+.install-card p{color:var(--dim);font-size:14px;line-height:1.7;
+  margin-bottom:20px;font-weight:600}
+.install-card p b{color:var(--text)}
+
+.about{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+  padding:24px;box-shadow:var(--shadow)}
+.about-logo{width:88px;height:88px;border-radius:24px;margin:0 auto 18px;
+  background:linear-gradient(135deg,var(--wine),var(--red),var(--yellow));
+  display:grid;place-items:center;font-size:40px;overflow:hidden;
+  box-shadow:0 10px 30px rgba(92,26,46,.4);transition:transform .4s}
+.about-logo:active{transform:rotate(12deg) scale(1.06)}
+.about-logo img{width:100%;height:100%;object-fit:cover}
+.about h3{font-size:22px;font-weight:900;letter-spacing:-.6px;margin-bottom:12px;text-align:center}
+.about p{color:var(--dim);line-height:1.7;font-size:14.5px;margin-bottom:13px}
+.motto{display:block;margin-top:16px;padding:14px 20px;border-radius:15px;text-align:center;
+  background:linear-gradient(100deg,var(--wine),var(--red));color:#fff;
+  font-weight:900;font-size:15px;box-shadow:0 8px 24px rgba(92,26,46,.4)}
+
+@media(min-width:860px){
+  body{padding-bottom:40px}
+  header{padding:12px 30px}
+  .brand-text h1{font-size:18px}
+  .brand-text small{max-width:none;font-size:11px}
+  .logo-box{width:44px;height:44px;font-size:22px}
+  .tabbar{display:none}
+  .top-nav{display:flex;gap:3px;margin-left:26px}
+  .top-nav button{padding:9px 16px;border-radius:12px;font-size:14px;font-weight:700;
+    color:var(--wine-dim);transition:.2s}
+  .top-nav button:hover{color:var(--wine-text);background:var(--wine-soft)}
+  .top-nav button.on{color:var(--wine-text);background:rgba(255,255,255,.16)}
+  main{padding:0 30px}
+  .hero{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;
+    padding:64px 0 56px}
+  .hero-actions{flex-direction:row;flex-wrap:wrap}
+  .btn{width:auto;padding:16px 30px}
+  .hero-visual{margin-top:0}
+  .float-card{aspect-ratio:1}
+  .sec-title{font-size:26px;margin:44px 0 20px}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}
+  .ctrl{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+  .ctrl .full{grid-column:auto}
+  .like-btn{padding:15px 26px}
+  .ad-slot{padding:0 30px;margin-top:56px}
+  .lb img{max-height:80vh}
+  .stats{max-width:480px;margin:28px auto 0}
+  .about{padding:38px;max-width:700px;margin:0 auto}
+  .about-logo{width:110px;height:110px;font-size:50px}
+  #toasts{bottom:30px}
+  .pool-switch{max-width:560px}
+  .wa-fab{bottom:24px;right:24px}
+  .talk{flex-direction:row;align-items:center;justify-content:space-between}
+  .talk .btn{width:auto;flex-shrink:0}
+}
+@media(min-width:1100px){ .grid{grid-template-columns:repeat(auto-fill,minmax(210px,1fr))} }
+
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand" id="brandBtn">
+    <div class="logo-box" id="logoBox"><span id="logoEmoji">😄</span></div>
+    <div class="brand-text">
+      <h1>Karo's Memes</h1>
+      <small>We can put a smile on your face</small>
+    </div>
+  </div>
+  <nav class="top-nav" id="topNav">
+    <button data-nav="home">Home</button>
+    <button data-nav="random">Random</button>
+    <button data-nav="liked">Liked</button>
+    <button data-nav="about">About</button>
+  </nav>
+  <div class="head-right">
+    <div class="live-pill" title="People viewing now">
+      <span class="live-dot"></span><span id="headerLive">—</span>
+    </div>
+    <button class="icon-btn" id="refreshBtn" aria-label="Refresh memes" title="Refresh memes">🔄</button>
+    <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">🌙</button>
+  </div>
+</header>
+
+<main>
+
+  <section class="page active" id="p-home">
+    <div class="hero">
+      <div>
+        <p class="greet" id="greeting">Welcome to the vault.</p>
+        <h2>We can put a <span class="grad">smile on your face.</span></h2>
+        <p class="sub">A collection of exclusive rib cracking memes for your viewing pleasure. Why worry when you can laugh</p>
+        <div class="hero-actions">
+          <button class="btn btn-red" id="heroRandom">🎲 Surprise Me</button>
+          <button class="btn btn-yellow" id="heroRecent">🆕 New Memes</button>
+          <button class="btn btn-yellow" id="heroBest">⭐ Best of Karo's memes</button>
+          <button class="btn btn-blue" id="installBtn">📱 Save Karo's memes to phone apps</button>
+        </div>
+        <p class="trust">Tap the dice and get a joke that actually suits your current journey</p>
+      </div>
+      <div class="hero-visual">
+        <div class="glow"></div>
+        <div class="float-card" id="floatCard">
+          <div class="spin" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)"></div>
+          <div class="badge" id="floatBadge">😄</div>
+          <div class="tag">🎲 Loading…</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sec-title">📊 Your Vibe</h3>
+    <div class="stats">
+      <div class="stat"><b id="sLiked">0</b><span>Liked</span></div>
+      <div class="stat"><b id="sSeen">0</b><span>Viewed</span></div>
+      <div class="stat" style="grid-column:1/-1"><b id="sStreak">0 🔥</b><span>Day Streak</span></div>
+    </div>
+
+    <div class="visitors" id="visitorsCard">
+      <div class="vis-item">
+        <b id="totalVisits">—</b>
+        <span>Total Visits</span>
+      </div>
+      <div class="vis-item live">
+        <b><span class="live-dot"></span><span id="liveNow">—</span></b>
+        <span>Viewing Now</span>
+      </div>
+    </div>
+
+    <div class="talk">
+      <div>
+        <h4>💬 Talk to me — or laugh with me</h4>
+        <p style="margin-top:6px">Got a meme that deserves to be here? Or just want to say hi?</p>
+      </div>
+      <a class="btn btn-wa" id="talkBtn" target="_blank" rel="noopener">
+        💬 Message me on WhatsApp
+      </a>
+    </div>
+
+    <h3 class="sec-title">✨ Meme of the Day</h3>
+    <div class="stage" id="motdStage">
+      <div class="spin"></div>
+    </div>
+  </section>
+
+  <section class="page" id="p-random">
+    <h3 class="sec-title">🎲 Random Meme</h3>
+
+    <div class="pool-switch" id="poolSwitch">
+      <button class="pool-btn on" data-pool="all">🎲 Surprise Me</button>
+      <button class="pool-btn" data-pool="recent">🆕 New Memes</button>
+      <button class="pool-btn" data-pool="best">⭐ Best of Karo's memes</button>
+    </div>
+
+    <div class="stage" id="randStage">
+      <div class="spin"></div>
+    </div>
+    <p class="swipe-hint">👆 Swipe left or right for the next one · double-tap to like</p>
+
+    <div class="ctrl">
+      <button class="btn btn-red full" id="nextBtn">🎲 Another One</button>
+      <button class="like-btn" id="likeBtn"><span class="h">🤍</span> <span id="likeTxt">Like</span></button>
+      <button class="btn btn-wa" id="waShareBtn">📤 WhatsApp</button>
+      <button class="btn btn-ghost" id="fullBtn">🔍 Full</button>
+      <button class="btn btn-ghost" id="saveBtn">⬇️ Save</button>
+    </div>
+    <p class="meta" id="randMeta"></p>
+  </section>
+
+  <section class="page" id="p-liked">
+    <h3 class="sec-title">❤️ Liked Memes</h3>
+    <div class="center" id="likedEmpty" style="display:none">
+      <span class="big">💔</span>
+      <h3>Nothing liked yet</h3>
+      <p>Tap the heart on any meme and it'll wait for you here.</p>
+      <button class="btn btn-red" id="findBtn" style="width:auto;padding:15px 28px">Find Some Memes</button>
+    </div>
+    <div class="grid" id="likedGrid"></div>
+  </section>
+
+  <section class="page" id="p-about">
+    <h3 class="sec-title">👋 About</h3>
+    <div class="about">
+      <div class="about-logo" id="aboutLogo"><span id="aboutEmoji">😄</span></div>
+      <h3>Karo's Memes</h3>
+      <p>A personal vault — a home for every meme I've collected over the years. No algorithm, no feed, no doom-scrolling. Just a big pile of nonsense, served one tap at a time.</p>
+      <p>Hit <b>Random</b> and you won't see the same one twice in a row. Like the ones that get you — they'll be waiting in <b>Liked</b>.</p>
+      <p style="font-size:12.5px">Built as a single HTML file. Memes live in Google Drive.</p>
+
+      <div class="talk" style="margin-top:20px">
+        <div>
+          <h4>💬 Talk to me — or laugh with me</h4>
+          <p style="margin-top:6px">Slide into my WhatsApp. Send memes, ideas, or just say hi.</p>
+        </div>
+        <a class="btn btn-wa" id="talkBtnAbout" target="_blank" rel="noopener">
+          💬 Open WhatsApp
+        </a>
+      </div>
+
+      <span class="motto">😄 We can put a smile on your face</span>
+    </div>
+  </section>
+
+</main>
+
+<div class="ad-slot">
+  <div class="ad-inner" id="adSlot">
+    <div class="ad-label">Advertisement</div>
+    <p>Your ad could live here — seen by every meme lover who visits.</p>
+  </div>
+</div>
+
+<div class="lb" id="lb">
+  <button class="lb-x" id="lbX">✕</button>
+  <div>
+    <img id="lbImg" alt="">
+    <div class="lb-bar">
+      <button id="lbLike">🤍 Like</button>
+      <button id="lbWa" class="wa">📤 WhatsApp</button>
+      <button id="lbClose">Close</button>
+    </div>
+  </div>
+</div>
+
+<a class="wa-fab" id="waFab" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+
+<nav class="tabbar" id="tabbar">
+  <button class="tab on" data-nav="home"><span class="ic">🏠</span>Home</button>
+  <button class="tab" data-nav="random"><span class="ic">🎲</span>Random</button>
+  <button class="tab" data-nav="liked"><span class="ic">❤️</span>Liked</button>
+  <button class="tab" data-nav="about"><span class="ic">ℹ️</span>About</button>
+</nav>
+
+<div id="toasts"></div>
+
+<script>
+/* ═══════════════════════════════════════════════════════
+   ⚙️  CONFIG — ALL VALUES FILLED IN
+   ═══════════════════════════════════════════════════════ */
+const CONFIG = {
+  // ── Google Drive folders — 3 random meme pools
+  FOLDER_ID:        "1CiPoWzeQz6rGYbZh7LKYnS99gHSHeZh_",   // Surprise Me
+  RECENT_FOLDER_ID: "10KxcJGxWc3pdBAq8dyyXqlRAI-J1rXeR",   // New Memes
+  BEST_FOLDER_ID:   "1jDemzRfODIDLirz_yFS4-ioYqF8mnot5",   // Best of Karo's memes
+  API_KEY:          "AIzaSyDLV_Ac_LVtDvBcdsx3NzwUOMlqBoSKE3s",
+  LOGO_FILE_ID:     "1XCxx-yp0-oHy8YQ4N2i1PYRwIj4b8D11",   // logo file ID
+  INCLUDE_SUBFOLDERS: true,
+
+  // ── WhatsApp
+  WHATSAPP_NUMBER: "2347026059881",
+  WHATSAPP_GREETING: "Hi Karo! I was just on your meme site 😄",
+
+  // ── Fill these in AFTER you deploy (see notes)
+  SITE_URL: "https://PASTE-YOUR-SITE-URL-HERE",
+  FEEDPULSE_ID: "PASTE_FEEDPULSE_ID_HERE"
+};
+
+/* ═══════════ STATE ═══════════ */
+const S = {
+  memes: [], recent: [], best: [],
+  byId: new Map(),
+  favs: new Set(JSON.parse(localStorage.getItem('km_favs')||'[]')),
+  seen: new Set(JSON.parse(localStorage.getItem('km_seen')||'[]')),
+  bag: { all: [], recent: [], best: [] },
+  pool: 'all',
+  cur: null, motd: null, logoId: null,
+  loading: true, err: null, lbMeme: null,
+  hasRecent: false, hasBest: false
+};
+
+const $ = id => document.getElementById(id);
+
+/* ═══════════ URLS ═══════════ */
+const isPhone = () => window.innerWidth < 860;
+const fullW  = () => isPhone() ? 1200 : 1800;
+const thumbW = () => isPhone() ? 400  : 500;
+const imgUrl   = (id,w) => `https://lh3.googleusercontent.com/d/${id}=w${w||fullW()}`;
+const thumbUrl = (id,w) => `https://drive.google.com/thumbnail?id=${id}&sz=w${w||thumbW()}`;
+const dlUrl    = id => `https://drive.google.com/uc?export=download&id=${id}`;
+
+function onImgErr(el){
+  if(el.dataset.fb) return;
+  el.dataset.fb='1';
+  el.src = thumbUrl(el.dataset.id, 1000);
+}
+
+/* ═══════════ HELPERS ═══════════ */
+function toast(msg){
+  const t=document.createElement('div');
+  t.className='toast'; t.textContent=msg;
+  $('toasts').appendChild(t);
+  setTimeout(()=>{
+    t.style.transition='opacity .3s,transform .3s';
+    t.style.opacity='0'; t.style.transform='translateY(8px)';
+    setTimeout(()=>t.remove(),320);
+  },1800);
+}
+
+function hearts(){
+  const r=$('likeBtn').getBoundingClientRect();
+  for(let i=0;i<7;i++){
+    const p=document.createElement('div');
+    p.className='particle';
+    p.textContent=['❤️','✨','💛','💙'][i%4];
+    p.style.left=(r.left+r.width/2)+'px';
+    p.style.top=r.top+'px';
+    p.style.setProperty('--dx',(Math.random()*140-70)+'px');
+    p.style.animationDelay=(i*.045)+'s';
+    document.body.appendChild(p);
+    setTimeout(()=>p.remove(),1300);
+  }
+}
+
+function confetti(){
+  const colors = ['#ff3b47','#ffcc2f','#2b6bff','#5C1A2E','#25D366'];
+  for(let i=0;i<50;i++){
+    const c = document.createElement('div');
+    c.className = 'confetti';
+    c.style.background = colors[i % colors.length];
+    c.style.left = (Math.random()*100)+'vw';
+    c.style.top = '-20px';
+    c.style.setProperty('--cx',(Math.random()*200-100)+'px');
+    c.style.setProperty('--cy',(window.innerHeight+60)+'px');
+    c.style.animationDelay = (Math.random()*0.3)+'s';
+    document.body.appendChild(c);
+    setTimeout(()=>c.remove(), 2800);
+  }
+}
+
+const saveFavs=()=>localStorage.setItem('km_favs',JSON.stringify([...S.favs]));
+const saveSeen=()=>localStorage.setItem('km_seen',JSON.stringify([...S.seen]));
+
+/* ═══════════ WHATSAPP ═══════════ */
+function waLink(text){
+  return `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+}
+
+function shareMemeToWhatsApp(m){
+  if(!m) return;
+  const url = imgUrl(m.id, 1800);
+  const text = `😂 Found this on Karo's Memes!\n\n${url}\n\n— We can put a smile on your face`;
+  window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+}
+
+/* ═══════════ DRIVE ═══════════ */
+async function listFolder(id,depth=0){
+  const imgs=[],subs=[]; let tok='';
+  do{
+    const p=new URLSearchParams({
+      q:`'${id}' in parents and trashed = false`,
+      key:CONFIG.API_KEY,
+      fields:'nextPageToken, files(id,name,mimeType)',
+      pageSize:'1000', supportsAllDrives:'true', includeItemsFromAllDrives:'true'
+    });
+    if(tok) p.set('pageToken',tok);
+    const r=await fetch(`https://www.googleapis.com/drive/v3/files?${p}`);
+    if(!r.ok){
+      const b=await r.json().catch(()=>({}));
+      throw new Error(b?.error?.message||`Google API error ${r.status}`);
+    }
+    const d=await r.json();
+    for(const f of (d.files||[])){
+      if(f.mimeType==='application/vnd.google-apps.folder') subs.push(f.id);
+      else if(f.mimeType.startsWith('image/')) imgs.push(f);
+    }
+    tok=d.nextPageToken||'';
+  }while(tok);
+
+  if(CONFIG.INCLUDE_SUBFOLDERS && depth<6){
+    for(const s of subs){
+      try{ imgs.push(...await listFolder(s,depth+1)); }catch(e){}
+    }
+  }
+  return imgs;
+}
+
+async function load(){
+  S.loading = true;
+  try{
+    const mainFiles = await listFolder(CONFIG.FOLDER_ID);
+    mainFiles.sort((a,b)=>(a.name||'').localeCompare(b.name||'',undefined,{numeric:true}));
+
+    let recentFiles = [];
+    if(CONFIG.RECENT_FOLDER_ID && !CONFIG.RECENT_FOLDER_ID.startsWith('PASTE_')){
+      try{
+        recentFiles = await listFolder(CONFIG.RECENT_FOLDER_ID);
+        recentFiles.sort((a,b)=>(a.name||'').localeCompare(b.name||'',undefined,{numeric:true}));
+        S.hasRecent = recentFiles.length > 0;
+      }catch(e){ S.hasRecent = false; }
+    }
+
+    let bestFiles = [];
+    if(CONFIG.BEST_FOLDER_ID && !CONFIG.BEST_FOLDER_ID.startsWith('PASTE_')){
+      try{
+        bestFiles = await listFolder(CONFIG.BEST_FOLDER_ID);
+        bestFiles.sort((a,b)=>(a.name||'').localeCompare(b.name||'',undefined,{numeric:true}));
+        S.hasBest = bestFiles.length > 0;
+      }catch(e){ S.hasBest = false; }
+    }
+
+    const map = new Map();
+    mainFiles.forEach(f => map.set(f.id, f));
+    recentFiles.forEach(f => map.set(f.id, f));
+    bestFiles.forEach(f => map.set(f.id, f));
+
+    S.memes = [...map.values()];
+    S.recent = recentFiles;
+    S.best = bestFiles;
+    S.byId = map;
+    S.loading = false;
+
+    S.logoId = CONFIG.LOGO_FILE_ID;
+    applyLogo();
+
+    if(!S.hasRecent){
+      const rb = document.querySelector('.pool-btn[data-pool="recent"]');
+      if(rb){ rb.disabled = true; rb.title = 'No New Memes folder configured'; }
+    }
+    if(!S.hasBest){
+      const bb = document.querySelector('.pool-btn[data-pool="best"]');
+      if(bb){ bb.disabled = true; bb.title = "No Best of Karo's memes folder configured"; }
+    }
+    if(S.pool === 'recent' && !S.hasRecent) S.pool = 'all';
+    if(S.pool === 'best' && !S.hasBest) S.pool = 'all';
+    setPool(S.pool, true);
+
+    updateStats();
+    renderMOTD();
+    next(true);
+    buildFloatCard();
+    renderLiked();
+
+    toast('✅ Memes ready');
+  }catch(e){
+    S.loading = false; S.err = e.message; showError();
+  }
+}
+
+/* ═══════════ LOGO ═══════════ */
+function applyLogo(){
+  if(!S.logoId) return;
+  const url = imgUrl(S.logoId, 300);
+  const pairs = [['logoBox','logoEmoji'],['aboutLogo','aboutEmoji'],['floatBadge',null]];
+  pairs.forEach(([box,emo])=>{
+    const el=$(box); if(!el) return;
+    const img=document.createElement('img');
+    img.alt="Karo's Memes"; img.src=url;
+    img.onload=()=>{ if(emo&&$(emo)) $(emo).style.display='none'; el.appendChild(img); };
+  });
+  const link=document.createElement('link');
+  link.rel='icon'; link.href=url;
+  document.head.appendChild(link);
+
+  const og = document.querySelector('meta[property="og:image"]');
+  if(og) og.setAttribute('content', url);
+
+  const apple = document.createElement('link');
+  apple.rel='apple-touch-icon'; apple.href=url;
+  document.head.appendChild(apple);
+}
+
+/* ═══════════ POOL SWITCH ═══════════ */
+function setPool(p, silent){
+  if(p==='recent' && !S.hasRecent) p='all';
+  if(p==='best' && !S.hasBest) p='all';
+  S.pool = p;
+  document.querySelectorAll('.pool-btn').forEach(b=>{
+    b.classList.toggle('on', b.dataset.pool === p);
+  });
+  if(!silent){
+    next();
+    const labels = { all: '🎲 Surprise Me', recent: '🆕 New Memes', best: "⭐ Best of Karo's memes" };
+    toast(labels[p]);
+  }
+}
+
+/* ═══════════ RANDOM ═══════════ */
+function poolSource(pool){
+  if(pool === 'recent') return S.recent;
+  if(pool === 'best')   return S.best;
+  return S.memes;
+}
+
+function fromBag(pool){
+  if(!S.bag[pool].length){
+    const source = poolSource(pool);
+    S.bag[pool] = [...source];
+    for(let i=S.bag[pool].length-1;i>0;i--){
+      const j=Math.floor(Math.random()*(i+1));
+      [S.bag[pool][i],S.bag[pool][j]]=[S.bag[pool][j],S.bag[pool][i]];
+    }
+    const cur = S.cur;
+    if(cur && S.bag[pool].length > 1){
+      const l = S.bag[pool].length - 1;
+      if(S.bag[pool][l].id === cur.id){
+        [S.bag[pool][l], S.bag[pool][l-1]] = [S.bag[pool][l-1], S.bag[pool][l]];
+      }
+    }
+  }
+  return S.bag[pool].pop();
+}
+
+function next(instant){
+  const pool = S.pool;
+  const source = poolSource(pool);
+  if(!source.length){ showEmptyPool(); return; }
+  const m = fromBag(pool);
+  if(!m) return;
+
+  const stage = $('randStage');
+  const old = stage.querySelector('img');
+
+  const paint = () => {
+    stage.innerHTML = '';
+    if(S.logoId && m.id === S.logoId){
+      const f=document.createElement('div');
+      f.className='logo-flag'; f.textContent='✨';
+      stage.appendChild(f);
+    }
+    const img=document.createElement('img');
+    img.dataset.id=m.id; img.onerror=()=>onImgErr(img);
+    img.src=imgUrl(m.id);
+    img.alt=m.name||'meme';
+    stage.appendChild(img);
+  };
+
+  if(old && !instant){
+    old.classList.add('out');
+    setTimeout(paint, 200);
+  } else paint();
+
+  S.cur = m;
+  S.seen.add(m.id); saveSeen();
+  updateStats(); syncLike();
+  const prefix = pool==='recent' ? '🆕 ' : pool==='best' ? '⭐ ' : '';
+  $('randMeta').textContent = prefix + (m.name||'');
+
+  if(S.bag[pool].length){
+    new Image().src = imgUrl(S.bag[pool][S.bag[pool].length-1].id, thumbW());
+  }
+}
+
+function showEmptyPool(){
+  const pool = S.pool;
+  const stage = $('randStage');
+  const labels = {
+    recent: { icon:'🆕', title:'No New Memes yet', body:'Drop some fresh memes in your "New Memes" folder on Google Drive, then tap the refresh button up top.' },
+    best:   { icon:'⭐', title:"Best of Karo's memes is empty", body:'Add your all-time favorites to the "Best of Karo\'s memes" folder, then tap refresh up top.' },
+    all:    { icon:'📭', title:'Surprise Me is empty', body:'Add memes to your main Drive folder, then tap refresh up top.' }
+  };
+  const L = labels[pool];
+  stage.innerHTML = `
+    <div class="center">
+      <span class="big">${L.icon}</span>
+      <h3>${L.title}</h3>
+      <p>${L.body}</p>
+    </div>`;
+}
+
+/* ═══════════ LIKE ═══════════ */
+const MILESTONES = [10,25,50,100,250,500];
+
+function toggleLike(){
+  const m=S.cur; if(!m) return;
+  if(S.favs.has(m.id)){ S.favs.delete(m.id); toast('💔 Removed'); }
+  else {
+    S.favs.add(m.id);
+    hearts();
+    const n = S.favs.size;
+    if(MILESTONES.includes(n)){
+      confetti();
+      toast(`🎉 ${n} likes! Legend.`);
+    } else {
+      toast('❤️ Liked');
+    }
+  }
+  saveFavs(); syncLike(); updateStats(); renderLiked();
+  if($('lb').classList.contains('open')) syncLbLike();
+}
+
+function syncLike(){
+  const m=S.cur; if(!m) return;
+  const liked=S.favs.has(m.id);
+  const b=$('likeBtn');
+  b.classList.toggle('liked',liked);
+  b.querySelector('.h').textContent=liked?'❤️':'🤍';
+  $('likeTxt').textContent=liked?'Liked':'Like';
+}
+
+function syncLbLike(){
+  const m=S.lbMeme; if(!m) return;
+  const liked=S.favs.has(m.id);
+  $('lbLike').textContent=liked?'❤️ Liked':'🤍 Like';
+}
+
+/* ═══════════ MOTD ═══════════ */
+function renderMOTD(){
+  const source = S.hasBest && S.best.length ? S.best
+                : S.hasRecent && S.recent.length ? S.recent
+                : S.memes;
+  if(!source.length) return;
+  const day = Math.floor(Date.now()/864e5);
+  const m = source[day % source.length];
+  S.motd = m;
+
+  const st=$('motdStage'); st.innerHTML='';
+  const img=document.createElement('img');
+  img.dataset.id=m.id; img.onerror=()=>onImgErr(img);
+  img.src=imgUrl(m.id, isPhone()?900:1400);
+  img.alt=m.name||'';
+  st.appendChild(img);
+  st.onclick=()=>openLb(m);
+}
+
+/* ═══════════ HERO FLOAT CARD ═══════════ */
+function buildFloatCard(){
+  const source = S.memes;
+  if(!source.length) return;
+  const card = $('floatCard');
+  let i = Math.floor(Math.random()*source.length);
+
+  const show=()=>{
+    const m = source[i % source.length]; i++;
+    card.querySelectorAll('img').forEach(e=>e.remove());
+    const el=document.createElement('img');
+    el.dataset.id=m.id; el.onerror=()=>onImgErr(el);
+    el.src=imgUrl(m.id, isPhone()?700:900);
+    el.alt=''; el.style.animation='pop .5s ease';
+    card.insertBefore(el, card.firstChild);
+    card.querySelector('.tag').textContent='🎲 '+((m.name||'meme').slice(0,26));
+  };
+  show();
+  setInterval(show, 4500);
+}
+
+/* ═══════════ LIKED GRID ═══════════ */
+function renderLiked(){
+  const grid=$('likedGrid'); grid.innerHTML='';
+  const list=[...S.favs].map(id=>S.byId.get(id)).filter(Boolean);
+  $('likedEmpty').style.display = list.length ? 'none' : 'block';
+
+  const frag=document.createDocumentFragment();
+  for(const m of list){
+    const t=document.createElement('div'); t.className='tile';
+    t.onclick=()=>openLb(m);
+    const img=document.createElement('img');
+    img.loading='lazy'; img.decoding='async';
+    img.dataset.id=m.id; img.onerror=()=>onImgErr(img);
+    img.src=imgUrl(m.id, thumbW());
+    img.alt=m.name||'';
+    t.appendChild(img);
+    const d=document.createElement('div'); d.className='dot'; d.textContent='❤️';
+    t.appendChild(d);
+    frag.appendChild(t);
+  }
+  grid.appendChild(frag);
+}
+
+/* ═══════════ LIGHTBOX ═══════════ */
+function openLb(m){
+  if(!m) return;
+  S.lbMeme=m;
+  const img=$('lbImg');
+  img.dataset.id=m.id; img.onerror=()=>onImgErr(img);
+  img.src=imgUrl(m.id);
+  img.alt=m.name||'';
+  syncLbLike();
+  $('lb').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeLb(){
+  $('lb').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+/* ═══════════ ROUTER ═══════════ */
+const PAGES=['home','random','liked','about'];
+function go(p){
+  if(!PAGES.includes(p)) p='home';
+  if(location.hash==='#'+p){ renderRoute(); return; }
+  location.hash='#'+p;
+}
+function renderRoute(){
+  let p=location.hash.replace('#','')||'home';
+  if(!PAGES.includes(p)) p='home';
+
+  document.querySelectorAll('.page').forEach(e=>e.classList.remove('active'));
+  $('p-'+p).classList.add('active');
+
+  document.querySelectorAll('[data-nav]').forEach(b=>{
+    b.classList.toggle('on', b.dataset.nav===p);
+  });
+
+  window.scrollTo({top:0,behavior:'instant'});
+  if(p==='liked') renderLiked();
+}
+window.addEventListener('hashchange',renderRoute);
+
+/* ═══════════ THEME ═══════════ */
+function toggleTheme(){
+  const cur=document.documentElement.getAttribute('data-theme');
+  const nx=cur==='dark'?'light':'dark';
+  document.documentElement.setAttribute('data-theme',nx);
+  $('themeBtn').textContent = nx==='dark'?'☀️':'🌙';
+  localStorage.setItem('km_theme',nx);
+}
+
+/* ═══════════ STATS / STREAK / GREETING ═══════════ */
+function updateStats(){
+  $('sLiked').textContent = S.favs.size;
+  $('sSeen').textContent  = S.seen.size;
+
+  const today = new Date().toDateString();
+  const last = localStorage.getItem('km_last');
+  let streak = parseInt(localStorage.getItem('km_streak')||'0',10);
+  if(last !== today){
+    const y = new Date(Date.now()-864e5).toDateString();
+    streak = (last === y) ? streak + 1 : 1;
+    localStorage.setItem('km_streak', streak);
+    localStorage.setItem('km_last', today);
+  }
+  $('sStreak').textContent = `${streak} 🔥`;
+}
+
+function setGreeting(){
+  const h = new Date().getHours();
+  let g = 'Welcome to the vault.';
+  if(h < 12) g = 'Good morning, welcome to the vault.';
+  else if(h < 17) g = 'Good afternoon, welcome to the vault.';
+  else if(h < 22) g = 'Good evening, welcome to the vault.';
+  else g = 'Late night laughs, welcome to the vault.';
+  $('greeting').textContent = g;
+}
+
+/* ═══════════ VISITOR COUNTERS ═══════════ */
+async function initCounters(){
+  const url = CONFIG.SITE_URL;
+  if(url && !url.includes('PASTE-')){
+    try{
+      const r = await fetch(`https://librecounter.org/counter/show?url=${encodeURIComponent(url)}`);
+      const svg = await r.text();
+      const nums = svg.match(/[\d,]+/g);
+      if(nums && nums.length) $('totalVisits').textContent = nums[0];
+      else $('totalVisits').textContent = '—';
+    }catch(e){ $('totalVisits').textContent = '—'; }
+  } else {
+    $('totalVisits').textContent = '—';
+  }
+
+  const fid = CONFIG.FEEDPULSE_ID;
+  if(fid && !fid.startsWith('PASTE_')){
+    try{
+      await refreshLive();
+      setInterval(refreshLive, 15000);
+    }catch(e){
+      $('liveNow').textContent = '1';
+      $('headerLive').textContent = '1';
+    }
+  } else {
+    $('liveNow').textContent = '1';
+    $('headerLive').textContent = '1';
+  }
+}
+
+async function refreshLive(){
+  const fid = CONFIG.FEEDPULSE_ID;
+  if(!fid || fid.startsWith('PASTE_')) return;
+  try{
+    const r = await fetch(`https://api.feedpulse.com/api/analytics/livetraffic/${fid}`);
+    const d = await r.json();
+    const n = (d?.current ?? d?.live ?? 1).toString();
+    $('liveNow').textContent = n;
+    $('headerLive').textContent = n;
+  }catch(e){}
+}
+
+/* ═══════════ ERROR ═══════════ */
+function showError(){
+  $('randStage').innerHTML=`
+    <div class="center">
+      <span class="big">😵</span>
+      <h3>Couldn't reach your memes</h3>
+      <p>${S.err}</p>
+      <div class="err">
+        <b>Check these:</b>
+        <ul>
+          <li>All three folders set to <b>Anyone with the link → Viewer</b>?</li>
+          <li>Pasted the <b>Folder IDs</b>, not the whole URLs?</li>
+          <li><b>Google Drive API</b> enabled in your project?</li>
+          <li>API key restricted to <b>Google Drive API</b>?</li>
+        </ul>
+      </div>
+    </div>`;
+  $('motdStage').innerHTML='';
+}
+
+/* ═══════════ REFRESH ═══════════ */
+async function refreshMemes(){
+  const btn = $('refreshBtn');
+  btn.classList.add('spinning');
+  S.bag = { all: [], recent: [], best: [] };
+  S.cur = null;
+  await load();
+  setTimeout(()=>btn.classList.remove('spinning'), 800);
+}
+
+/* ═══════════ APP INSTALL ═══════════ */
+let deferredPrompt = null;
+
+const isStandalone = () =>
+  window.matchMedia('(display-mode: standalone)').matches ||
+  window.navigator.standalone === true;
+
+const isIOS = () =>
+  /iphone|ipad|ipod/i.test(navigator.userAgent) ||
+  (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
+function installModal(html){
+  const wrap = document.createElement('div');
+  wrap.className = 'install-modal';
+  wrap.innerHTML = `<div class="install-card">${html}</div>`;
+  document.body.appendChild(wrap);
+  const close = () => wrap.remove();
+  wrap.querySelector('.im-close')?.addEventListener('click', close);
+  wrap.addEventListener('click', e => { if(e.target === wrap) close(); });
+}
+
+function showIOSInstructions(){
+  installModal(`
+    <div class="em">📱</div>
+    <h3>Save Karo's Memes to your home screen</h3>
+    <ol>
+      <li>Tap the <b>Share</b> button ⬆️ at the bottom of Safari</li>
+      <li>Scroll down and tap <b>Add to Home Screen</b></li>
+      <li>Tap <b>Add</b> — done! 🎉</li>
+    </ol>
+    <button class="btn btn-red im-close" style="width:100%">Got it</button>
+  `);
+}
+
+function showAndroidInstructions(){
+  installModal(`
+    <div class="em">📱</div>
+    <h3>Save Karo's Memes to your home screen</h3>
+    <ol>
+      <li>Tap the <b>⋮ menu</b> at the top-right of Chrome</li>
+      <li>Tap <b>Add to Home screen</b> or <b>Install app</b></li>
+      <li>Tap <b>Add</b> — done! 🎉</li>
+    </ol>
+    <p>If you don't see that option, tap the menu and choose <b>Add to Home screen</b>.</p>
+    <button class="btn btn-red im-close" style="width:100%">Got it</button>
+  `);
+}
+
+function showDesktopInstructions(){
+  installModal(`
+    <div class="em">📱</div>
+    <h3>Save Karo's Memes to your phone</h3>
+    <p>Open this site in <b>Chrome</b> on Android or <b>Safari</b> on iPhone.
+       Then use the browser menu to <b>"Install app"</b> or <b>"Add to Home Screen"</b>.</p>
+    <button class="btn btn-red im-close" style="width:100%">Got it</button>
+  `);
+}
+
+function showAlreadyInstalled(){
+  installModal(`
+    <div class="em">✅</div>
+    <h3>You're already set!</h3>
+    <p>Karo's Memes is already saved to your home screen.
+       Look for the icon on your phone and tap it to open the app.</p>
+    <button class="btn btn-red im-close" style="width:100%">Nice</button>
+  `);
+}
+
+async function handleInstall(){
+  if(isStandalone()){ showAlreadyInstalled(); return; }
+
+  if(deferredPrompt){
+    deferredPrompt.prompt();
+    try{
+      const {outcome} = await deferredPrompt.userChoice;
+      if(outcome === 'accepted') toast('🎉 Adding to your home screen…');
+      else toast('No worries — tap again anytime');
+    }catch(e){}
+    deferredPrompt = null;
+    return;
+  }
+
+  if(isIOS()){ showIOSInstructions(); return; }
+  if(/android/i.test(navigator.userAgent)){ showAndroidInstructions(); return; }
+  showDesktopInstructions();
+}
+
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault();
+  deferredPrompt = e;
+});
+
+window.addEventListener('appinstalled', () => {
+  toast("🎉 Karo's Memes is on your home screen!");
+  deferredPrompt = null;
+});
+
+/* ═══════════ SWIPE + DOUBLE TAP ═══════════ */
+(function gestures(){
+  const stage=$('randStage');
+  let x0=0,y0=0,t0=0,dragging=false,lastTap=0;
+
+  stage.addEventListener('touchstart',e=>{
+    const t=e.touches[0];
+    x0=t.clientX; y0=t.clientY; t0=Date.now(); dragging=true;
+  },{passive:true});
+
+  stage.addEventListener('touchend',e=>{
+    if(!dragging) return; dragging=false;
+    const t=e.changedTouches[0];
+    const dx=t.clientX-x0, dy=t.clientY-y0;
+    const dt=Date.now()-t0;
+
+    if(Math.abs(dx)>55 && Math.abs(dx)>Math.abs(dy)*1.4 && dt<600){
+      if(navigator.vibrate) navigator.vibrate(10);
+      next();
+      return;
+    }
+    const now=Date.now();
+    if(Math.abs(dx)<12 && Math.abs(dy)<12){
+      if(now-lastTap<300){ toggleLike(); lastTap=0; }
+      else lastTap=now;
+    }
+  },{passive:true});
+
+  document.addEventListener('keydown',e=>{
+    if(e.target.tagName==='INPUT') return;
+    if($('lb').classList.contains('open')){
+      if(e.key==='Escape') closeLb();
+      return;
+    }
+    if(location.hash==='#random'||location.hash===''){
+      if(e.key==='ArrowRight'||e.key==='r'||e.key==='R'){ go('random'); next(); }
+      if(e.key==='l'||e.key==='L') toggleLike();
+    }
+  });
+})();
+
+/* ═══════════ WIRE UP ═══════════ */
+function wire(){
+  $('waFab').href         = waLink(CONFIG.WHATSAPP_GREETING);
+  $('talkBtn').href       = waLink(CONFIG.WHATSAPP_GREETING);
+  $('talkBtnAbout').href  = waLink(CONFIG.WHATSAPP_GREETING);
+
+  document.querySelectorAll('[data-nav]').forEach(b=>{
+    b.addEventListener('click',()=>go(b.dataset.nav));
+  });
+  $('brandBtn').onclick=()=>go('home');
+  $('themeBtn').onclick=toggleTheme;
+  $('refreshBtn').onclick=refreshMemes;
+
+  document.querySelectorAll('.pool-btn').forEach(b=>{
+    b.addEventListener('click',()=>{
+      if(b.disabled) return;
+      if(S.pool === b.dataset.pool) return;
+      setPool(b.dataset.pool);
+    });
+  });
+
+  $('heroRandom').onclick=()=>{ S.pool='all'; setPool('all', true); go('random'); next(); };
+  $('heroRecent').onclick=()=>{
+    if(!S.hasRecent){ toast('🆕 No New Memes folder set up yet'); return; }
+    S.pool='recent'; setPool('recent', true); go('random'); next();
+  };
+  $('heroBest').onclick=()=>{
+    if(!S.hasBest){ toast("⭐ No Best of Karo's memes folder set up yet"); return; }
+    S.pool='best'; setPool('best', true); go('random'); next();
+  };
+  $('installBtn').onclick=handleInstall;
+  $('findBtn').onclick=()=>go('random');
+
+  $('nextBtn').onclick=()=>{ if(navigator.vibrate) navigator.vibrate(10); next(); };
+  $('likeBtn').onclick=toggleLike;
+  $('waShareBtn').onclick=()=>shareMemeToWhatsApp(S.cur);
+  $('fullBtn').onclick=()=>openLb(S.cur);
+  $('saveBtn').onclick=()=>{ if(S.cur) window.open(dlUrl(S.cur.id),'_blank'); };
+
+  $('lbX').onclick=closeLb;
+  $('lbClose').onclick=closeLb;
+  $('lb').onclick=e=>{ if(e.target===$('lb')) closeLb(); };
+  $('lbLike').onclick=()=>{
+    if(!S.lbMeme) return;
+    const id=S.lbMeme.id;
+    if(S.favs.has(id)) S.favs.delete(id); else { S.favs.add(id); hearts(); }
+    saveFavs(); syncLbLike(); updateStats(); renderLiked(); syncLike();
+  };
+  $('lbWa').onclick=()=>shareMemeToWhatsApp(S.lbMeme);
+
+  let taps=0,timer=null;
+  $('logoBox').addEventListener('click',()=>{
+    taps++; clearTimeout(timer);
+    timer=setTimeout(()=>taps=0,1200);
+    if(taps>=5){ taps=0; toast('🎉 You found the secret!'); hearts(); confetti(); }
+  });
+
+  let rt;
+  window.addEventListener('resize',()=>{
+    clearTimeout(rt);
+    rt=setTimeout(()=>{ if(S.memes.length){ renderMOTD(); } },400);
+  });
+}
+
+/* ═══════════ BOOT ═══════════ */
+(function init(){
+  const th=localStorage.getItem('km_theme')||'light';
+  document.documentElement.setAttribute('data-theme',th);
+  $('themeBtn').textContent = th==='dark'?'☀️':'🌙';
+
+  wire();
+  renderRoute();
+  updateStats();
+  setGreeting();
+  initCounters();
+
+  load();
+})();
+</script>
+</body>
+</html>
