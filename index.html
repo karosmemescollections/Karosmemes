@@ -10,8 +10,11 @@
 <meta property="og:title" content="Karo's Memes — We can put a smile on your face">
 <meta property="og:description" content="A collection of exclusive rib cracking memes for your viewing pleasure. Why worry when you can laugh.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="PASTE_YOUR_SITE_URL_HERE">
-<meta property="og:image" content="https://lh3.googleusercontent.com/d/1XCxx-yp0-oHy8YQ4N2i1PYRwIj4b8D11=w600">
+<meta property="og:url" content="./">
+<meta property="og:image" content="logo.png">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="600">
+<meta property="og:site_name" content="Karo's Memes">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -223,8 +226,21 @@ main{max-width:1200px;margin:0 auto;padding:0 14px}
   filter:drop-shadow(0 2px 6px rgba(0,0,0,.6));animation:twinkle 2s ease-in-out infinite}
 @keyframes twinkle{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(1.2)}}
 
+/* Big prominent share button directly under the meme */
+.share-under{
+  margin-top:12px;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  padding:18px 22px;border-radius:18px;
+  background:var(--wa);color:#fff;font-weight:900;font-size:16px;
+  box-shadow:0 10px 30px rgba(37,211,102,.4);
+  width:100%;transition:transform .15s,box-shadow .2s;
+  letter-spacing:.1px;
+}
+.share-under:active{transform:scale(.98);box-shadow:0 6px 20px rgba(37,211,102,.5)}
+.share-under .icon{font-size:20px;line-height:1}
+
 .swipe-hint{text-align:center;font-size:11.5px;color:var(--dim);
-  font-weight:700;margin-top:10px;letter-spacing:.3px}
+  font-weight:700;margin-top:14px;letter-spacing:.3px}
 
 .ctrl{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px}
 .ctrl .full{grid-column:1/-1}
@@ -375,6 +391,43 @@ main{max-width:1200px;margin:0 auto;padding:0 14px}
 .about p{color:var(--dim);line-height:1.7;font-size:14.5px;margin-bottom:13px}
 .motto{display:block;margin-top:16px;padding:14px 20px;border-radius:15px;text-align:center;
   background:linear-gradient(100deg,var(--wine),var(--red));color:#fff;
+  font-weight:900;font-size:15px;box-shadow:0 8px 24px rgba(92,26,46,.4)}
+
+@media(min-width:860px){
+  body{padding-bottom:40px}
+  header{padding:12px 30px}
+  .brand-text h1{font-size:18px}
+  .brand-text small{max-width:none;font-size:11px}
+  .logo-box{width:44px;height:44px;font-size:22px}
+  .tabbar{display:none}
+  .top-nav{display:flex;gap:3px;margin-left:26px}
+  .top-nav button{padding:9px 16px;border-radius:12px;font-size:14px;font-weight:700;
+    color:var(--wine-dim);transition:.2s}
+  .top-nav button:hover{color:var(--wine-text);background:var(--wine-soft)}
+  .top-nav button.on{color:var(--wine-text);background:rgba(255,255,255,.16)}
+  main{padding:0 30px}
+  .hero{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;
+    padding:64px 0 56px}
+  .hero-actions{flex-direction:row;flex-wrap:wrap}
+  .btn{width:auto;padding:16px 30px}
+  .hero-visual{margin-top:0}
+  .float-card{aspect-ratio:1}
+  .sec-title{font-size:26px;margin:44px 0 20px}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}
+  .ctrl{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+  .ctrl .full{grid-column:auto}
+  .like-btn{padding:15px 26px}
+  .ad-slot{padding:0 30px;margin-top:56px}
+  .lb img{max-height:80vh}
+  .stats{max-width:480px;margin:28px auto 0}
+  .about{padding:38px;max-width:700px;margin:0 auto}
+  .about-logo{width:110px;height:110px;font-size:50px}
+  #toasts{bottom:30px}
+  .pool-switch{max-width:560px}
+  .wa-fab{bottom:24px;right:24px}
+  .talk{flex-direction:row;align-items:center;justify-content:space-between}
+  .talk .btn{width:auto;flex-shrink:0}
+  .sh  background:linear-gradient(100deg,var(--wine),var(--red));color:#fff;
   font-weight:900;font-size:15px;box-shadow:0 8px 24px rgba(92,26,46,.4)}
 
 @media(min-width:860px){
