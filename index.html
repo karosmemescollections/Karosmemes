@@ -157,7 +157,6 @@ main{max-width:1200px;margin:0 auto;padding:0 14px}
 .stat b{display:block;font-size:21px;font-weight:900;letter-spacing:-.8px}
 .stat span{font-size:9.5px;color:var(--dim);font-weight:800;letter-spacing:.7px;text-transform:uppercase}
 
-/* ══════════ VISITOR COUNTER (Histats) ══════════ */
 .visitors{
   display:flex;align-items:center;justify-content:center;
   background:linear-gradient(135deg,rgba(92,26,46,.06),rgba(255,204,47,.06));
@@ -343,7 +342,6 @@ main{max-width:1200px;margin:0 auto;padding:0 14px}
   100%{transform:translate(var(--cx),var(--cy)) rotate(720deg);opacity:0}
 }
 
-/* ══════════ MODAL ══════════ */
 .modal-wrap{
   position:fixed;inset:0;z-index:500;background:rgba(20,5,12,.9);
   display:flex;align-items:center;justify-content:center;padding:20px;
@@ -395,6 +393,20 @@ main{max-width:1200px;margin:0 auto;padding:0 14px}
   margin-bottom:20px;font-weight:600;text-align:center}
 .modal-card p b{color:var(--text)}
 .modal-card .em{font-size:52px;margin-bottom:12px;line-height:1;text-align:center}
+
+.about{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+  padding:24px;box-shadow:var(--shadow)}
+.about-logo{width:88px;height:88px;border-radius:24px;margin:0 auto 18px;
+  background:linear-gradient(135deg,var(--wine),var(--red),var(--yellow));
+  display:grid;place-items:center;font-size:40px;overflow:hidden;
+  box-shadow:0 10px 30px rgba(92,26,46,.4);transition:transform .4s}
+.about-logo:active{transform:rotate(12deg) scale(1.06)}
+.about-logo img{width:100%;height:100%;object-fit:cover}
+.about h3{font-size:22px;font-weight:900;letter-spacing:-.6px;margin-bottom:12px;text-align:center}
+.about p{color:var(--dim);line-height:1.7;font-size:14.5px;margin-bottom:13px}
+.motto{display:block;margin-top:16px;padding:14px 20px;border-radius:15px;text-align:center;
+  background:linear-gradient(100deg,var(--wine),var(--red));color:#fff;
+  font-weight:900;font-size:15px;box-shadow:0 8px 24px rgba(92,26,46,.4)}
 
 @media(min-width:860px){
   body{padding-bottom:40px}
@@ -1170,9 +1182,7 @@ async function refreshMemes(){
   setTimeout(()=>btn.classList.remove('spinning'), 800);
 }
 
-/* ═══════════════════════════════════════════════════════
-   APP INSTALL — choice modal with 2 options
-   ═══════════════════════════════════════════════════════ */
+/* ═══════════ APP INSTALL ═══════════ */
 let deferredPrompt = null;
 
 const isStandalone = () =>
@@ -1444,9 +1454,9 @@ function wire(){
 })();
 </script>
 
-<!-- ══════════ HISTATS COUNTER (live visitors + total) ══════════ -->
+<!-- ══════════ HISTATS COUNTER ══════════ -->
 <script type="text/javascript">var _Hasync= _Hasync|| [];
-_Hasync.push(['Histats.start', '1,5053545,4,336,112,62,00011001']);
+_Hasync.push(['Histats.start', '1,5053545,4,438,112,75,00011011']);
 _Hasync.push(['Histats.fasi', '1']);
 _Hasync.push(['Histats.track_hits', '']);
 (function() {
@@ -1454,7 +1464,7 @@ var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async
 hs.src = ('//s10.histats.com/js15_as.js');
 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
 })();</script>
-<noscript><a href="https://www.histats.com" target="_blank"><img src="//sstatic1.histats.com/0.gif?5053545&101" alt="" border="0"></a></noscript>
+<noscript><a href="/" target="_blank"><img src="//sstatic1.histats.com/0.gif?5053545&101" alt="counter easy hit" border="0"></a></noscript>
 <!-- ══════════ END HISTATS ══════════ -->
 
 </body>
